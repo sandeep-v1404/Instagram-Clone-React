@@ -42,7 +42,6 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         //User Login
-        console.log(authUser);
         setUser(authUser);
       } else {
         //User Logout
@@ -96,15 +95,15 @@ function App() {
               <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="" />
             </center>
             <Input
-              placeholder="email"
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)} />
-            <Input
               placeholder="username"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)} />
+            <Input
+              placeholder="email"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} />
             <Input
               placeholder="password"
               type="password"
@@ -159,7 +158,7 @@ function App() {
         </div>
         <div className="app__postsRight">
           <InstagramEmbed
-            url='https://instagr.am/p/Zw9o4/'
+            url="https://www.instagram.com/p/B_jxHBeJNjc/?utm_source=ig_embed&amp;utm_campaign=loading"
             maxWidth={320}
             hideCaption={false}
             containerTagName='div'
@@ -175,7 +174,7 @@ function App() {
 
       {user?.displayName ? (<ImageUpload username={user.displayName} />
       ) :
-        (<h3>Sorry you need to login to Upload</h3>
+        (<h3 className="display__text">Sorry, you need to login to Upload</h3>
         )}
     </div>
   );

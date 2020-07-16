@@ -47,10 +47,10 @@ function Post({ username, user, caption, imgURL, postId }) {
             <img className="post__image" src={imgURL} alt="" />
             <h4 className="post__text"><strong>{username}</strong> {caption}</h4>
             <div className="post__comment">
-                {comments.map((comment) => {
-                    return <p>
+                {comments.map((id, comment) => {
+                    return (<p key={id}>
                         <strong>{comment.username} </strong>{comment.text}
-                    </p>
+                    </p>)
                 })}
 
             </div>

@@ -31,3 +31,11 @@
 .app__postsRight{
   margin-left: 20px;
 }
+.display__text{
+  text-align: center;
+}
+@media(max-width: 600px) {
+  .app__postsRight{
+    display: none;
+  }
+}
