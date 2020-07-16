@@ -1,0 +1,16 @@
+.image__upload{
+    display: flex ;
+    flex-direction: column;
+    width: 60%;
+    margin:10px auto;
+    border-top: 1px solid lightgray;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    background-color: #fafafa;
+
+}
+
+.image__upload__progress{
+    width: 100%;
+}
