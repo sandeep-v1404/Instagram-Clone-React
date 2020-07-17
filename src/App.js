@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Post from "./post";
+import Post from "./components/post"
 import Modal from '@material-ui/core/Modal';
 import { db, auth } from "./firebase";
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Input } from '@material-ui/core';
-import ImageUpload from './ImageUpload';
+import ImageUpload from './components/ImageUpload';
 import InstagramEmbed from 'react-instagram-embed';
+import Footer from "./components/footer";
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -175,6 +176,7 @@ function App() {
       ) :
         (<h3 className="display__text">Sorry, you need to login to Upload</h3>
         )}
+      <Footer />
     </div>
   );
 }

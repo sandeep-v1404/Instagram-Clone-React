@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
-import { db, storage } from "./firebase";
+import { db, storage } from "../firebase";
 import firebase from "firebase";
 import './ImageUpload.css';
 function ImageUpload({ username }) {
