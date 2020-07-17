@@ -98,12 +98,12 @@ function App() {
               placeholder="username"
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)} />
+              onChange={(e) => setUsername(e.target.value.trim())} />
             <Input
               placeholder="email"
               type="text"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} />
+              onChange={(e) => setEmail(e.target.value.trim())} />
             <Input
               placeholder="password"
               type="password"
@@ -127,14 +127,13 @@ function App() {
               placeholder="email"
               type="text"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} />
+              onChange={(e) => setEmail(e.target.value.trim())} />
             <Input
               placeholder="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)} />
             <Button type="submit" onClick={signIn}>SignIn</Button>
-
           </form>
         </div>
       </Modal>
